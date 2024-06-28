@@ -1,0 +1,99 @@
+
+#photo{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
+ 
+}
+#photo::before{
+    content: "";
+    background-color:teal;
+    position: absolute;
+    width: 100%;
+    height: 100vmax;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.15);
+    z-index: -1;
+
+}
+.fl{
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 15px;
+
+}
+.card{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid aqua;
+}
+.card:hover{
+    width: 60%;
+    transition: 1s;
+    box-shadow: 0 0 40px aqua;
+}
+.card .layer{
+    width: 100%;
+    height: 50%;
+    margin-top: -250px;
+    position: relative;
+    background: linear-gradient(to top,rgba(0,0,0,0.9),transparent);
+    
+}
+.card .layer .info{
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    opacity: 0;
+    margin-top: 20px;
+}
+.card:hover .layer .info{
+    opacity: 1;
+}
+.card .image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.card:hover .image{
+    transform: scale(1.2);
+}
+
+.photo-head{
+    text-align: center;
+    padding-top: 20px;
+    justify-content: center;
+    font-family: 'Trebuchet MS';
+   
+
+}
+.photo-head p{
+    margin:auto;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    color:white;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.photo-head h2{
+    font-size: 30px;
+    color: aqua;
+
+}
+.photo-head h4{
+    color:white;
+    font-size: 22px;
+
+}
